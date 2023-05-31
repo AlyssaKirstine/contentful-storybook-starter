@@ -12,7 +12,9 @@ const HeroModule = ({ header, body, button, image }: HeroModulePropsType) => {
   return (
     <div className="flex flex-col md:flex-row items-center bg-white justify-center h-full max-w-7xl mx-auto">
       <div className="py-14 px-6 lg:px-24 md:py-24">
-        <h1 className="font-bold text-2xl lg:text-5xl">{header}</h1>
+        <h1 className="text-green-950 font-bold text-2xl lg:text-5xl">
+          {header}
+        </h1>
         <p className="text-green-950 py-4">{body}</p>
         {button && (
           <a href={button.href} target="_blank">

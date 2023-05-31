@@ -15,7 +15,7 @@ export default function Header() {
         />
         <a href="https://medium.com/@alyssakirstine" target="_blank">
           <button className="border rounded-full border-green-800 text-green-800 py-2 px-5 transition-shadow hover:shadow-lg">
-            Open tutorial
+            About the author
           </button>
         </a>
       </nav>
