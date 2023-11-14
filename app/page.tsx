@@ -1,12 +1,16 @@
 import HeroModule from "@/components/heroModule";
+import React from "react";
 
-export default function Home() {
+export default async function Home() {
   return (
-    <main className="bg-white">
+    <React.Fragment>
       <HeroModule
         header="Marketing websites made easy"
         body="Combining the power of Storybook and Contentful unlocks a seamless and efficient workflow, empowering developers and content creators to effortlessly collaborate and deliver captivating user experiences with pixel-perfect precision and dynamic content integration."
-        image="/heroImage.jpg"
+        image={{
+          title: "Bench overlooking mountains",
+          url: "/heroImage.jpg",
+        }}
       />
       <HeroModule
         header="Transform your workflow"
@@ -16,6 +20,6 @@ export default function Home() {
           href: "https://medium.com/@alyssakirstine",
         }}
       />
-    </main>
+    </React.Fragment>
   );
 }

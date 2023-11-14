@@ -1,11 +1,14 @@
-interface HeroModulePropsType {
+export interface HeroModulePropsType {
   header: string;
   body: string;
   button?: {
     text: string;
     href: string;
   };
-  image?: string;
+  image?: {
+    title: string;
+    url: string;
+  };
 }
 
 const HeroModule = ({ header, body, button, image }: HeroModulePropsType) => {
@@ -24,7 +27,13 @@ const HeroModule = ({ header, body, button, image }: HeroModulePropsType) => {
           </a>
         )}
       </div>
-      {image && <img src={image} alt="" className="w-screen md:w-1/2 h-auto" />}
+      {image && (
+        <img
+          src={image.url}
+          alt={image.title}
+          className="w-screen md:w-1/2 h-auto"
+        />
+      )}
     </div>
   );
 };

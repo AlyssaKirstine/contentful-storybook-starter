@@ -5,11 +5,6 @@ import HeroModule from ".";
 const meta: Meta<typeof HeroModule> = {
   title: "Modules/Hero",
   component: HeroModule,
-  argTypes: {
-    image: {
-      control: { type: "file" },
-    },
-  },
 };
 
 export default meta;
@@ -41,6 +36,9 @@ export const WithImage: Story = {
       text: "Button text",
       href: "#",
     },
-    image: "https://dummyimage.com/1276x1282/166434/ffffff&text=Add+image+here",
+    image: {
+      title: "Image alt text",
+      url: "https://dummyimage.com/1276x1282/166434/ffffff&text=Add+image+here",
+    },
   },
 };
